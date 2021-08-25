@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小米商城",
+    "navigationBarBackgroundColor": "#FF6A00"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}
