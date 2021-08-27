@@ -1,0 +1,81 @@
+.floor .headerImg {
+  width: 100%;
+  height: 460rpx;
+  margin-bottom: 12rpx;
+}
+.floor .headerImg image {
+  width: 100%;
+  height: 460rpx;
+}
+.floor .goodsList {
+  padding: 0 12rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.floor .goodsList .goods {
+  width: 358rpx;
+}
+.floor .goodsList .goods .goodsImg {
+  width: 358rpx;
+  height: 292rpx;
+}
+.floor .goodsList .goods .goodsImg image {
+  width: 356rpx;
+  height: 292rpx;
+}
+.floor .goodsList .goods .goodsInfo {
+  padding: 21rpx 28rpx;
+  text-align: center;
+  font-size: 28rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.floor .goodsList .goods .goodsInfo .name {
+  white-space: nowrap; /*规定文本不换行**/
+  text-overflow: ellipsis; /**显示省略符号来代表被修剪的文本。*/
+  overflow: hidden;
+}
+.floor .goodsList .goods .goodsInfo .desc {
+  color: #757575;
+}
+.floor .goodsList .goods .goodsInfo .price {
+  color: #ea625b;
+}
+.floor .goodsList .goods .goodsInfo .price >text {
+  color: #757575;
+  text-decoration: line-through;
+}
+.floor .goodsList .goods .goodsInfo .btn button {
+  width: 208rpx;
+  height: 60rpx;
+  background-color: #ea625b;
+  color: #fff;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+.floor .more {
+  height: 104rpx;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 104rpx;
+  background-color: #fff;
+}
+.floor .null {
+  width: 100%;
+  height: 12rpx;
+  background-color: #f5f5f5;
+}
+

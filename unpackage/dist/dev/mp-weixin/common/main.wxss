@@ -1,17 +1,67 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*每个页面公共css */
+@font-face {
+  font-family: "iconfont"; /* Project id 2769366 */
+  src: url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.woff2?t=1629940727518") format('woff2'), url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.woff?t=1629940727518") format('woff'), url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.ttf?t=1629940727518") format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-up:before {
+  content: "\e613";
+}
+.icon-down:before {
+  content: "\e615";
+}
+.icon-right-copy:before {
+  content: "\e605";
+}
+.icon-right:before {
+  content: "\e609";
+}
+.icon-iconfonti:before {
+  content: "\e62b";
+}
+.icon-sousuo:before {
+  content: "\e646";
+}
+.icon-weibo1:before {
+  content: "\e600";
+}
+.icon-qq:before {
+  content: "\e604";
+}
+.icon-category:before {
+  content: "\eb93";
+}
+.icon-wenhao:before {
+  content: "\e6b4";
+}
+.icon-xingqiu:before {
+  content: "\e65e";
+}
+.icon-anquanweishi:before {
+  content: "\e677";
+}
+.icon-zhifubao:before {
+  content: "\e60f";
+}
+.icon-yonghu:before {
+  content: "\e698";
+}
+.icon-pingguo:before {
+  content: "\e601";
+}
+.icon-weixinicon2x:before {
+  content: "\e602";
+}
+.icon-shouye-black:before {
+  content: "\e603";
+}
+page {
+  height: 100%;
+}
 

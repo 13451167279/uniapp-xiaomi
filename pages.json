@@ -5,11 +5,70 @@
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
+		}, {
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/star/star",
+			"style": {
+				"navigationBarTitleText": "米圈",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/shopcart/shopcart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/center/center",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "小米商城",
 		"navigationBarBackgroundColor": "#FF6A00"
+	},
+	"tabBar": {
+		"color": "#555555",
+		"selectedColor": "#FF6900",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "./static/images/tabbar/icon-home.c1947eda40.png",
+			"selectedIconPath": "./static/images/tabbar/icon-home-selected.598ca2c8f9.png"
+		}, {
+			"pagePath": "pages/category/category",
+			"text": "分类",
+			"iconPath": "./static/images/tabbar/icon-category.be93273636.png",
+			"selectedIconPath": "./static/images/tabbar/icon-category-selected.252b82a2d7.png"
+		}, {
+			"pagePath": "pages/star/star",
+			"text": "米圈",
+			"iconPath": "./static/images/tabbar/icon-star.d051789804.png",
+			"selectedIconPath": "./static/images/tabbar/icon-star-selected.52a68e3664.png"
+		}, {
+			"pagePath": "pages/shopcart/shopcart",
+			"text": "购物车",
+			"iconPath": "./static/images/tabbar/icon-cart.585c3aa4d3.png",
+			"selectedIconPath": "./static/images/tabbar/icon-cart-selected.0099b47830.png"
+		},{
+			"pagePath": "pages/center/center",
+			"text": "我的",
+			"iconPath": "./static/images/tabbar/icon-user.23496a0116.png",
+			"selectedIconPath": "./static/images/tabbar/icon-user-selected.fceea5d907.png"
+		}]
 	}
+
 }

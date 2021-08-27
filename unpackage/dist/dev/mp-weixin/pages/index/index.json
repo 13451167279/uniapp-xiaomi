@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {}
+  "usingComponents": {
+    "floor": "/pages/index/components/Floor/floor"
+  }
 }

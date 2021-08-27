@@ -1,0 +1,23 @@
+{
+  "name": "uniappXiaomi",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/13451167279/uniapp-xiaomi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/13451167279/uniapp-xiaomi/issues"
+  },
+  "homepage": "https://github.com/13451167279/uniapp-xiaomi#readme",
+  "description": "",
+  "dependencies": {
+    "vuex": "^3.6.2"
+  }
+}

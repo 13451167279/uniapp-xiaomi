@@ -1,0 +1,7 @@
+.cartContainer {
+  height: 100%;
+}
+.cartContainer .header {
+  height: 50rpx;
+}
+
