@@ -1,6 +1,6 @@
 <template>
 	<view>
-		star
+		页面开发中...
 	</view>
 </template>
 

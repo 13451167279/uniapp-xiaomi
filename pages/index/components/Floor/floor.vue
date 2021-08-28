@@ -1,8 +1,8 @@
 <template>
 	<view class="floor">
-		<view class="headerImg"><image :src="hotSellList.headerImg[0].img_url" mode=""></image></view>
+		<view class="headerImg"><image :src="floorGoodsList.headerImg[0].img_url" mode=""></image></view>
 		<view class="goodsList">
-			<view class="goods" v-for="goods in hotSellList.goodsList" :key="goods.product_id">
+			<view class="goods" @click="toDetail(goods)"  v-for="goods in floorGoodsList.goodsList" :key="goods.product_id">
 				<view class="goodsImg">
 					<image :src="goods.img_url" mode=""></image>
 				</view>
@@ -17,7 +17,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="more">更多{{title}}产品 ></view>
+		<view class="more">更多{{floorGoodsList.title}}产品 ></view>
 		<view class="null">
 			
 		</view>
@@ -26,9 +26,17 @@
 
 <script>
 export default {
-	props:['hotSellList','title'],
+	props:['floorGoodsList'],
 	data() {
 		return {};
+	},
+	methods:{
+		toDetail(goods){
+			// wx.setStorageSync('goods_key',goods);
+			// wx.navigateTo({
+			// 	url:'/pages/detail/detail',
+			// })
+		}
 	}
 };
 </script>
@@ -61,7 +69,7 @@ export default {
 				font-size 28rpx
 				display flex
 				flex-direction column
-				.name
+				.name,.desc
 					white-space: nowrap;    /*规定文本不换行**/
 					text-overflow: ellipsis;  /**显示省略符号来代表被修剪的文本。*/
 					overflow: hidden;

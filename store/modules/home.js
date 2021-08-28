@@ -19,8 +19,7 @@ const actions={
 	async reqIndexData({commit}){
 		const res = await request('/getIndexData');
 		const indexAllData = res.data.sections.filter(item=>item.body.items);
-		 
-		console.log(indexAllData);
+
 		commit('SET_INDEXDATA',indexAllData);
 	},
 }

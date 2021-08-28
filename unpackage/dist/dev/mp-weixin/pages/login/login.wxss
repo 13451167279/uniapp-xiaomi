@@ -1,0 +1,166 @@
+.loginContainer {
+  width: 100%;
+  height: 100%;
+}
+.loginContainer .header {
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  color: #666;
+}
+.loginContainer .header .name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32rpx;
+}
+.loginContainer .header .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #979797;
+}
+.loginContainer .logo {
+  width: 100%;
+  height: 200rpx;
+  margin: 40rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.loginContainer .logo image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 40rpx;
+}
+.loginContainer .loginBox {
+  width: 100%;
+  padding: 0 45rpx;
+  box-sizing: border-box;
+}
+.loginContainer .loginBox .title {
+  width: 80%;
+  font-size: 40rpx;
+  color: #000;
+  font-weight: 600;
+}
+.loginContainer .loginBox .phone {
+  width: 100%;
+  height: 100rpx;
+  margin: 40rpx 0;
+  background-color: #f0f0f0;
+  border-radius: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 6rpx 28rpx;
+  box-sizing: border-box;
+}
+.loginContainer .loginBox .phone .desc {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.loginContainer .loginBox .phone .iconfont {
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.loginContainer .loginBox .phone input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+.loginContainer .loginBox .phone .placeholder-class {
+  font-size: 28rpx;
+  color: #d2d2d2;
+}
+.loginContainer .loginBox .nextBtn {
+  margin: 0;
+  padding: 0;
+  outline-style: none;
+  border: none;
+  background-color: #b5daff;
+  width: 100%;
+  border-radius: 50rpx;
+  color: #fff;
+}
+.loginContainer .loginBox .passLogin {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: #757575;
+  font-size: 26rpx;
+  margin-top: 60rpx;
+}
+.loginContainer .otherLogin {
+  margin-top: 40rpx;
+}
+.loginContainer .otherLogin .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 24rpx;
+  color: #b9b9b9;
+  position: relative;
+}
+.loginContainer .otherLogin .title text::before {
+  content: '';
+  width: 100rpx;
+  height: 1rpx;
+  position: absolute;
+  top: 50%;
+  left: 180rpx;
+  background-color: #b9b9b9;
+}
+.loginContainer .otherLogin .title text::after {
+  content: '';
+  width: 100rpx;
+  height: 1rpx;
+  position: absolute;
+  top: 50%;
+  right: 180rpx;
+  background-color: #b9b9b9;
+}
+.loginContainer .otherLogin .iconList {
+  margin-top: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.loginContainer .otherLogin .iconList .loginImg {
+  margin: 0 20rpx;
+}
+.loginContainer .otherLogin .iconList .loginImg image {
+  width: 66rpx;
+  height: 66rpx;
+}
+

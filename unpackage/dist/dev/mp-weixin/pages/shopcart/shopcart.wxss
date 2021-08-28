@@ -1,7 +1,322 @@
 .cartContainer {
+  position: relative;
   height: 100%;
 }
 .cartContainer .header {
-  height: 50rpx;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  color: #666;
+}
+.cartContainer .header .name {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32rpx;
+}
+.cartContainer .header .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: #979797;
+}
+.cartContainer .mainScroll {
+  height: calc(100vh - 100rpx);
+}
+.cartContainer .mainScroll .toLogin {
+  height: 110rpx;
+  padding: 0 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.cartContainer .mainScroll .toLogin .desc {
+  font-size: 28rpx;
+}
+.cartContainer .mainScroll .toLogin .go {
+  font-size: 24rpx;
+  color: #757575;
+}
+.cartContainer .mainScroll .toLogin .go .iconfont {
+  font-size: 24rpx;
+}
+.cartContainer .mainScroll .cart .cartNull {
+  padding: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+}
+.cartContainer .mainScroll .cart .cartNull image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.cartContainer .mainScroll .cart .cartNull .text {
+  font-size: 24rpx;
+  color: #979797;
+  margin: 0 20rpx;
+}
+.cartContainer .mainScroll .cart .cartNull .goShop {
+  font-size: 26rpx;
+  border: 3rpx solid #bcbcbc;
+  padding: 0 10rpx;
+  line-height: 42rpx;
+}
+.cartContainer .mainScroll .cartList .cartGoods {
+  padding: 25rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.cartContainer .mainScroll .cartList .cartGoods .checkImg {
+  margin: 0 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.cartContainer .mainScroll .cartList .cartGoods .checkImg image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsImg {
+  width: 184rpx;
+  height: 184rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #bcbcbc;
+  border-radius: 10rpx;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsImg image {
+  width: 184rpx;
+  height: 184rpx;
+  border-radius: 10rpx;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo {
+  margin-left: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .name {
+  font-size: 28rpx;
+  color: #666;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .price {
+  padding: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count .changeNum {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count .changeNum .sub.active {
+  background-color: #fafafa;
+  color: #d6d6d6;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count .changeNum .iconfont {
+  width: 62rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #696969;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count .changeNum .num {
+  width: 61rpx;
+  height: 61rpx;
+  line-height: 62rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #efefef;
+}
+.cartContainer .mainScroll .cartList .cartGoods .goodsInfo .count .del {
+  width: 62rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  text-align: center;
+  color: #b2b2b2;
+  margin-left: 200rpx;
+}
+.cartContainer .mainScroll .recommend {
+  width: 100%;
+}
+.cartContainer .mainScroll .recommend .title {
+  text-align: center;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+  margin: 0 20rpx;
+}
+.cartContainer .mainScroll .recommend .title::before {
+  content: '';
+  display: block;
+  width: 100rpx;
+  border: 1rpx solid #6b6b6b;
+  position: relative;
+  top: 50%;
+  left: 180rpx;
+}
+.cartContainer .mainScroll .recommend .title::after {
+  content: '';
+  display: block;
+  width: 100rpx;
+  border: 1rpx solid #6b6b6b;
+  position: relative;
+  top: -50%;
+  left: 465rpx;
+}
+.cartContainer .mainScroll .recommend .recommendGoods {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.cartContainer .mainScroll .recommend .recommendGoods .goods image {
+  width: 372rpx;
+  height: 372rpx;
+}
+.cartContainer .mainScroll .recommend .recommendGoods .goods .goodsInfo {
+  padding: 24rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.cartContainer .mainScroll .recommend .recommendGoods .goods .goodsInfo .goodsName {
+  width: 310rpx;
+  font-size: 26rpx;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1 /** 多行文本溢出...*/;
+  overflow: hidden;
+}
+.cartContainer .mainScroll .recommend .recommendGoods .goods .goodsInfo .price {
+  color: #ff6900;
+}
+.footer {
+  width: 100%;
+  height: 104rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.footer .money,
+.footer .toShop,
+.footer .pay {
+  width: 33.3333%;
+  text-align: center;
+}
+.footer .money {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  position: relative;
+}
+.footer .money .checkImg image {
+  position: absolute;
+  left: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.footer .money .num {
+  margin-left: 30rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.footer .money .allMoney {
+  font-size: 32rpx;
+  margin-top: 6rpx;
+  color: #ff6900;
+  font-weight: 600;
+}
+.footer .toShop {
+  background-color: #f4f4f4;
+  height: 104rpx;
+  line-height: 104rpx;
+  font-size: 28rpx;
+  color: #696969;
+}
+.footer .pay {
+  background-color: #ff6900;
+  height: 104rpx;
+  line-height: 104rpx;
+}
+@-webkit-keyframes titelShow {
+from {
+    height: 0;
+    opacity: 0;
+}
+to {
+    height: 260rpx;
+    opacity: 1;
+}
+}
+@keyframes titelShow {
+from {
+    height: 0;
+    opacity: 0;
+}
+to {
+    height: 260rpx;
+    opacity: 1;
+}
 }
 

@@ -1,0 +1,109 @@
+.goodsFloor {
+  margin-top: 30rpx;
+}
+.goodsFloor .goodsTitle {
+  width: 525rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #333;
+}
+.goodsFloor .goods {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 6rpx;
+  margin-bottom: 16rpx;
+}
+.goodsFloor .goods image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.goodsFloor .goods .goodsInfo {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: #797979;
+  font-weight: 500;
+}
+.goodsFloor .goods .goodsInfo .name {
+  margin: 0 0 10rpx 4rpx;
+}
+.goodsFloor .goods .goodsInfo .sellInfo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.goodsFloor .goods .goodsInfo .sellInfo .price::before {
+  content: '￥';
+  font-size: 24rpx;
+  color: #333;
+}
+.goodsFloor .goods .goodsInfo .sellInfo .price::after {
+  content: '起';
+  font-size: 24rpx;
+  color: #333;
+}
+.goodsFloor .goods .goodsInfo .sellInfo .tag {
+  margin: 0rpx 20rpx;
+  width: 55rpx;
+  height: 26rpx;
+  color: #c69768;
+  font-size: 24rpx;
+  line-height: 26rpx;
+  text-align: center;
+  border: 1px solid #c69768;
+  border-radius: 6rpx;
+}
+.goodsFloor_1 {
+  width: 525rpx;
+  margin-top: 30rpx;
+}
+.goodsFloor_1 .title {
+  width: 525rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #333;
+}
+.goodsFloor_1 .goodsList {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.goodsFloor_1 .goodsList .goods {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  width: 30.3333%;
+  margin: 21rpx 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.goodsFloor_1 .goodsList .goods image {
+  margin: 0 35rpx;
+  width: 104rpx;
+  height: 104rpx;
+}
+.goodsFloor_1 .goodsList .goods .name {
+  margin-top: 29rpx;
+  font-size: 24rpx;
+  color: #797979;
+}
+

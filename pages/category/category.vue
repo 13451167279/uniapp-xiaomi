@@ -10,104 +10,26 @@
 			<!-- 左边导肮 -->
 			<scroll-view class="navScroll" scroll-y="true" enable-flex>
 				<view class="scrollItem">
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
-					<view class="navItem ">推荐</view>
-					<view class="navItem active">小米手机</view>
-					<view class="navItem ">Ridmi手机</view>
+					<view @click="changeCate({ cate })" class="navItem" :class="{ active: defuleCateId === cate.category_id }" v-for="(cate, index) in categoryList" :key="cate.csategory_id">
+						{{ cate.category_name }}
+					</view>
 				</view>
 			</scroll-view>
 			<!-- 右边滚动 -->
 			<scroll-view class="mainScroll" scroll-y="true" enable-flex>
 				<view class="scrollItem">
-					<view class="mainImg"><image src="../../static/images/bj.jpg" mode=""></image></view>
+					<view class="mainImg"><image :src="cateGoodsList[0].body.items[0].img_url" mode=""></image></view>
 
 					<!-- 头部导航 -->
-					<scroll-view class="navList" scroll-x="true" enable-flex>
+					<scroll-view class="navList" scroll-x="true" enable-flex >
 						<view class="scrollItem">
-							<view class="nav">小米数字系列</view>
-							<view class="nav">小米数字系列</view>
-							<view class="nav">小米数字系列</view>
-							<view class="nav">小米数字系列</view>
-							<view class="nav">小米数字系列</view>
+							<view class="nav" v-for="title in mainList.title_list" :key="title">{{ title.title }}</view>
 						</view>
 					</scroll-view>
 
 					<!-- 商品列表 -->
-					<view class="goodsFloor">
-						<view class="goodsTitle">小米数字系列</view>
-						<view class="gootsList">
-							<view class="goods">
-								<image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cea1ff3517387569b7f59fc2b7d01d30.png?w=800&h=800" mode=""></image>
-								<view class="goodsInfo">
-									<view class="name">小米11Ultra</view>
-									<view class="sellInfo">
-										<text class="price">4999</text>
-										<text class="tag">赠</text>
-									</view>
-								</view>
-							</view>
-						</view>
-						<view class="gootsList">
-							<view class="goods">
-								<image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cea1ff3517387569b7f59fc2b7d01d30.png?w=800&h=800" mode=""></image>
-								<view class="goodsInfo">
-									<view class="name">小米11Ultra</view>
-									<view class="sellInfo">
-										<text class="price">4999</text>
-										<text class="tag">赠</text>
-									</view>
-								</view>
-							</view>
-						</view>
-						<view class="gootsList">
-							<view class="goods">
-								<image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cea1ff3517387569b7f59fc2b7d01d30.png?w=800&h=800" mode=""></image>
-								<view class="goodsInfo">
-									<view class="name">小米11Ultra</view>
-									<view class="sellInfo">
-										<text class="price">4999</text>
-										<text class="tag">赠</text>
-									</view>
-								</view>
-							</view>
-						</view>
-					</view>
+					<Floor :cateGoods="cateGoods" v-for="(cateGoods, index) in categorGyroup" :key="index"></Floor>
 					<!-- 商品列表简单信息 -->
-					<view class="goodsFloor_1">
-						<view class="title">小米手机配件</view>
-						<view class="goodsList">
-							<view class="goods">
-								<image src="../../static/images/1.jpg" mode=""></image>
-								<text class="name">无线冲</text>
-							</view><view class="goods">
-								<image src="../../static/images/1.jpg" mode=""></image>
-								<text class="name">无线冲</text>
-							</view><view class="goods">
-								<image src="../../static/images/1.jpg" mode=""></image>
-								<text class="name">无线冲</text>
-							</view><view class="goods">
-								<image src="../../static/images/1.jpg" mode=""></image>
-								<text class="name">无线冲</text>
-							</view><view class="goods">
-								<image src="../../static/images/1.jpg" mode=""></image>
-								<text class="name">无线冲</text>
-							</view>
-						</view>
-					</view>
 				</view>
 			</scroll-view>
 		</view>
@@ -115,9 +37,51 @@
 </template>
 
 <script>
+import Floor from './components/floor.vue';
+import { mapState } from 'vuex';
 export default {
+	components: {
+		Floor
+	},
 	data() {
-		return {};
+		return {
+			defuleCateId: 1242
+		};
+	},
+
+	mounted() {
+		wx.showTabBar({
+			animation:true
+		})
+		this.getCategoryList();
+	},
+	methods: {
+		// 获取分类数据
+		getCategoryList() {
+			this.$store.dispatch('reqCategoryList');
+		},
+		// 点击分类，切换
+		changeCate(cateInfo) {
+			this.defuleCateId = cateInfo.cate.category_id;
+		}
+	},
+	computed: {
+		...mapState({
+			categoryList: state => state.category.categoryList || []
+		}),
+		// 根据点击分类ID计算显示的内容
+		mainList() {
+			return (this.categoryList || []).find(item => item.category_id === this.defuleCateId);
+		},
+		// 从当前分内的所有的内容里 计算分类列表
+		cateGoodsList() {
+			return (this.mainList || {}).category_list || [];
+		},
+		// 计算分类商品数组
+		categorGyroup() {
+			// 先商品列表中添加标题
+			return (this.cateGoodsList || []).filter(item => item.view_type === 'category_group').map(item => item.body);
+		}
 	}
 };
 </script>
@@ -201,80 +165,6 @@ export default {
 						background-color #efefef
 						padding 3rpx 10rpx
 						margin-right 34rpx
-			.goodsFloor
-				margin-top 30rpx
-				.goodsTitle
-					width 525rpx
-					height 66rpx
-					line-height 66rpx
-					font-size 30rpx
-					font-weight 700
-					color #333333
-				.goods
-					display flex
-					align-items center
-					padding 6rpx
-					margin-bottom 16rpx
-					image
-						width 140rpx
-						height 140rpx
-					.goodsInfo
-						margin-left 10rpx
-						font-size 30rpx
-						color #797979
-						font-weight 500
-						.name
-							margin 0 0 10rpx 4rpx
-						.sellInfo
-							display flex
-							align-items center
-							.price
-								&::before
-									content '￥'
-									font-size 24rpx
-									color #333333
-								&::after
-									content '起'
-									font-size 24rpx
-									color #333333
-							.tag
-								margin 0rpx 20rpx
-								width 46rpx
-								height 26rpx
-								color #C69768
-								font-size 24rpx
-								line-height 26rpx
-								text-align center
-								border 1px solid #C69768
-								border-radius 6rpx
-			.goodsFloor_1
-				margin-top 30rpx
-				.title
-					width 525rpx
-					height 66rpx
-					line-height 66rpx
-					font-size 30rpx
-					font-weight 700
-					color #333333
-				.goodsList
-					display flex
-					flex-wrap wrap
-					.goods
-						display flex
-						align-items center
-						width 33.3333%
-						margin 21rpx 0
-						display flex
-						flex-direction column
-						image
-							margin 0 35rpx
-							width 104rpx
-							height 104rpx
-						.name
-							margin-top 29rpx
-							font-size 24rpx
-							color #797979
-					
 .navScroll
 	margin 20
 </style>

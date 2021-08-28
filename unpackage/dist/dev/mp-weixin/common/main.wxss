@@ -1,7 +1,7 @@
 /*每个页面公共css */
 @font-face {
   font-family: "iconfont"; /* Project id 2769366 */
-  src: url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.woff2?t=1629940727518") format('woff2'), url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.woff?t=1629940727518") format('woff'), url("//at.alicdn.com/t/font_2769366_37kb1uqdd8x.ttf?t=1629940727518") format('truetype');
+  src: url("//at.alicdn.com/t/font_2769366_hpwtkae8ov8.woff2?t=1630068728454") format('woff2'), url("//at.alicdn.com/t/font_2769366_hpwtkae8ov8.woff?t=1630068728454") format('woff'), url("//at.alicdn.com/t/font_2769366_hpwtkae8ov8.ttf?t=1630068728454") format('truetype');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -9,6 +9,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-sub:before {
+  content: "\e643";
+}
+.icon-jiahao:before {
+  content: "\e606";
+}
+.icon-shanchu3:before {
+  content: "\e641";
+}
+.icon-gouwuche:before {
+  content: "\e621";
 }
 .icon-up:before {
   content: "\e613";

@@ -1,0 +1,91 @@
+.detailContainer .mainScroll {
+  height: calc(100vh - 94rpx);
+}
+.detailContainer .mainScroll .banner {
+  height: 820rpx;
+  width: 100%;
+}
+.detailContainer .mainScroll .banner .swiper-item image {
+  height: 820rpx;
+  width: 100%;
+}
+.detailContainer .mainScroll .detail {
+  margin-top: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.detailContainer .mainScroll .detail .price {
+  font-size: 40rpx;
+  color: #ff6a02;
+  font-weight: 700;
+}
+.detailContainer .mainScroll .detail .name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #000;
+  margin: 10rpx 4rpx;
+}
+.detailContainer .mainScroll .detail .desc {
+  font-size: 26rpx;
+  color: #000;
+  padding: 10rpx 20rpx 10rpx 0;
+}
+.detailContainer .cart {
+  font-size: 26rpx;
+  height: 94rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 0 10rpx;
+  background-color: #fff;
+}
+.detailContainer .cart .cartItem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  width: 100rpx;
+  height: 90rpx;
+}
+.detailContainer .cart .cartItem image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.detailContainer .cart .cartItem >view {
+  font-size: 26rpx;
+  text-align: center;
+  color: #747474;
+}
+.detailContainer .cart .add,
+.detailContainer .cart .buy {
+  width: 210rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  color: #fff;
+}
+.detailContainer .cart .add {
+  background-color: #fdc000;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+}
+.detailContainer .cart .buy {
+  background-color: #ff6c0e;
+  border-top-right-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}
+

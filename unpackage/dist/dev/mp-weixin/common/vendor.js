@@ -8165,7 +8165,9 @@ function normalizeComponent (
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 12));
 
-var _home = _interopRequireDefault(__webpack_require__(/*! ./modules/home.js */ 13));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _home = _interopRequireDefault(__webpack_require__(/*! ./modules/home.js */ 13));
+var _category = _interopRequireDefault(__webpack_require__(/*! ./modules/category.js */ 18));
+var _shopcart = _interopRequireDefault(__webpack_require__(/*! ./modules/shopcart.js */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 _vue.default.use(_vuex.default);
 
@@ -8188,7 +8190,9 @@ new _vuex.default.Store({
   actions: actions,
   gitters: gitters,
   modules: {
-    home: _home.default } });exports.default = _default;
+    home: _home.default,
+    category: _category.default,
+    shopcart: _shopcart.default } });exports.default = _default;
 
 /***/ }),
 /* 12 */
@@ -9333,8 +9337,7 @@ var actions = {
                 (0, _request.default)('/getIndexData'));case 3:res = _context2.sent;
               indexAllData = res.data.sections.filter(function (item) {return item.body.items;});
 
-              console.log(indexAllData);
-              commit('SET_INDEXDATA', indexAllData);case 7:case "end":return _context2.stop();}}}, _callee2);}))();
+              commit('SET_INDEXDATA', indexAllData);case 6:case "end":return _context2.stop();}}}, _callee2);}))();
   } };
 
 var getters = {
@@ -10236,6 +10239,139 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
   });
 }
+
+/***/ }),
+/* 18 */
+/*!*************************************************************!*\
+  !*** E:/MiniProgram/uniappXiaomi/store/modules/category.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 14));var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+var state = {
+  categoryList: [] };
+
+var mutations = {
+  SETCATEGORYLIST: function SETCATEGORYLIST(state, categoryList) {
+    state.categoryList = categoryList;
+  } };
+
+var actions = {
+  reqCategoryList: function reqCategoryList(_ref) {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var commit, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref.commit;_context.next = 3;return (
+                (0, _request.default)('/getCategoryData'));case 3:res = _context.sent;
+              commit('SETCATEGORYLIST', res.data);case 5:case "end":return _context.stop();}}}, _callee);}))();
+  } };
+
+var gitters = {};var _default =
+
+
+
+{
+  state: state,
+  mutations: mutations,
+  actions: actions,
+  gitters: gitters };exports.default = _default;
+
+/***/ }),
+/* 19 */
+/*!*************************************************************!*\
+  !*** E:/MiniProgram/uniappXiaomi/store/modules/shopcart.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 14));var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+var state = {
+  recommendList: [],
+  cartList: [
+  {
+    "count": 2,
+    "isChecked": true,
+    "action": {
+      "log_code": "bpm=83.247.3881503.1&uni=8.1242&next=6.64.2.13649&tag=8.1244",
+      "login": "N",
+      "path": "13649",
+      "type": "product",
+      "uri": "/pages/product/index" },
+
+    "cat_id": 0,
+    "comments_total": "",
+    "is_multi_price": true,
+    "is_stock": true,
+    "labels": [
+    "赠"],
+
+    "market_price": "5999",
+    "name": "小米11 Ultra",
+    "price": "5499",
+    "product_desc": "<font color='#ff4a00'>「买赠小米定制T恤；信用卡分期至高立省158元；赠149元Air2 SE蓝牙耳机（请选择“Air2 SE耳机套装”下单） 」</font>1/1.12''GN2｜128°超广角｜120X超长焦｜2K四微曲屏｜骁龙888｜IP68级防水｜67W 有线闪充｜67W 无线闪充｜10W 无线反充｜5000mAh超大电池｜LPDDR5｜WiFi6（增强版）｜哈曼卡顿音频认证｜立体声双扬声器",
+    "product_desc_origin": "1/1.12''GN2｜128°超广角｜120X超长焦｜2K四微曲屏｜骁龙888｜IP68级防水｜67W 有线闪充｜67W 无线闪充｜10W 无线反充｜5000mAh超大电池｜LPDDR5｜WiFi6（增强版）｜哈曼卡顿音频认证｜立体声双扬声器",
+    "product_id": 13649,
+    "puzzle_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cea1ff3517387569b7f59fc2b7d01d30.png?w=800&h=800",
+    "satisfy_per": "" },
+
+  {
+    "count": 3,
+    "isChecked": true,
+    "action": {
+      "log_code": "bpm=83.247.3881503.2&uni=8.1242&next=6.64.2.13650&tag=8.1244",
+      "login": "N",
+      "path": "13650",
+      "type": "product",
+      "uri": "/pages/product/index" },
+
+    "cat_id": 0,
+    "comments_total": "",
+    "is_multi_price": true,
+    "is_stock": true,
+    "labels": [
+    "赠"],
+
+    "market_price": "4999",
+    "name": "小米11 Pro",
+    "price": "4469",
+    "product_desc": "<font color='#ff4a00'>「买赠小米定制T恤；信用卡分期至高立省158元；赠129元福禄瘦T恤（请选择“福禄瘦T恤套装”下单） 」</font>1/1.12''GN2｜骁龙888｜2K四微曲屏｜IP68级防水｜67W 有线闪充｜67W 无线闪充｜10W 无线反充｜5000mAh超大电池｜LPDDR5｜WiFi6（增强版）｜哈曼卡顿音频认证｜立体声双扬声器",
+    "product_desc_origin": "1/1.12''GN2｜骁龙888｜2K四微曲屏｜IP68级防水｜67W 有线闪充｜67W 无线闪充｜10W 无线反充｜5000mAh超大电池｜LPDDR5｜WiFi6（增强版）｜哈曼卡顿音频认证｜立体声双扬声器",
+    "product_id": 13650,
+    "puzzle_url": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2237d83d46b43a7dca0b5fb6db2a9700.png?w=800&h=800",
+    "satisfy_per": "" }] };
+
+
+
+var mutations = {
+  SET_RECOMENDLIST: function SET_RECOMENDLIST(state, recommendList) {
+    state.recommendList = recommendList;
+  },
+  // 添加购物车
+  ADD_CART: function ADD_CART(state, obj) {
+    state.cartList.push(obj);
+  },
+  //删除购物车
+  DELETE_CART: function DELETE_CART(state, index) {
+    state.cartList.splice(index, 1);
+  } };
+
+
+var actions = {
+  reqRecommendList: function reqRecommendList(_ref)
+
+  {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var commit, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref.commit;_context.next = 3;return (
+                (0, _request.default)('/getShopcartData'));case 3:res = _context.sent;
+              commit('SET_RECOMENDLIST', res.data.recom_list);case 5:case "end":return _context.stop();}}}, _callee);}))();
+  } };
+
+var gitters = {};var _default =
+
+
+
+{
+  state: state,
+  mutations: mutations,
+  actions: actions,
+  gitters: gitters };exports.default = _default;
 
 /***/ })
 ]]);
